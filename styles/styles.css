@@ -1,0 +1,43 @@
+body{
+  background-image: url("../images/backgroundimage1.avif");
+   background-position: center;
+   background-size: cover;
+   height: 500px;
+   width: 1250px;
+}
+.container{
+   text-align: center;
+  align-items: center;
+  margin-top: 200px;
+}
+ .star{
+  color: blue;
+  font-size: 2.0rem;
+  padding: 0 1rem;  
+}
+.star::before{
+  content: '\2606';     
+  cursor: pointer;
+}
+.star.rated::before{
+   content: '\2605';   
+}
+
+.stars{
+    counter-reset: rateme 0;   
+    font-size: 2.0rem;
+    font-weight: 900;
+}
+.star.rated{
+    counter-increment: rateme 1;
+}
+.stars::after{
+    content: counter(rateme) '/5';
+}
+ .heading{
+  font-weight: bolder;
+  font-size: 25px;
+ }
+ p{
+  font-size: 20px;
+ }
